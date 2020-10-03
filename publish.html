@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbanio</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <!-- header starts -->
+    <header>
+        <nav class="navbar navbar-expand-sm ">
+            <div class="container-fluid ">
+                <span><img src="assets/Icons/Hamburger Menu.svg" class="burgermenu"></span>
+                <a href="index.html" class='navbar-brand'>
+                    <img src="assets/Icons/Carbanio Logo.svg" alt="logo" class='img-fluid logo'>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target='
+            #navbarCollapse'>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id='navbarCollapse'>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#" class='nav-link text-white'><img
+                                    src="assets/Icons/Logout Icon.svg" alt="logout"> Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- header ends -->
+
+    <!-- sidebar starts -->
+
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h6 class='font-weight-bold'>MAIN NAVIGATION</h6>
+            </div>
+
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <span><img src="assets/Icons/Chemical Icon.svg" class='mx-2'></span>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle text-secondary text-decoration-none">Chemicals
+
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="index.html" class='text-decoration-none  mt-2 '>
+                                <span class='circle mr-1 font-weight-bold'>&#9711;</span> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="view_edit.html" class='text-decoration-none active'>
+                                <span class='circle mr-1'>&#9711;</span> View/Edit</a>
+                        </li>
+                        <li>
+                            <a href="publish.html" class='text-decoration-none'>
+                                <span class='circle mr-1'>&#9711;</span> Publish</a>
+                        </li>
+                        <li>
+                            <a href="discount.html" class='text-decoration-none'>
+                                <span class='circle mr-1'>&#9711;</span> Internal Discount</a>
+                        </li>
+                        <li>
+                            <a href="download.html" class='text-decoration-none'>
+                                <span class='circle mr-1'>&#9711;</span> Download</a>
+                        </li>
+
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- sidebar ends -->
+<section id="view">
+    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-10">
+                <p class="PPtitle">Publish Products</p>
+            </div>
+            <div class="col-lg-2">
+                <div class="PPD"><span class="PPDC">DOWNLOAD</span></div>
+            </div>
+        </div>
+    </div>
+    <div class="PPselection">
+    <form>
+    <div class="container-fluid PPselect">
+    <div class="row">
+     <div class="col-lg-3"> 
+    <label class="label">Supplier Business</label>
+    <select class="form-control select2">
+        <option>Drag or enter a business name</option>
+        <option value="Research Lab Fine Chem Industries">Research Lab Fine Chem Industries</option>
+        <option value="Suvidhinanth Laboratories">Suvidhinanth Laboratories</option>
+        <option value="Jubilant Chemsys Ltd">Jubilant Chemsys Ltd</option>
+        <option value="Advent Chem Bio Pvt Ltd.">Advent Chem Bio Pvt Ltd.</option>
+        <option value="Impec labs">Impec labs</option>
+        <option value="Hetro-syn Research Laboratories">Hetro-syn Research Laboratories</option>
+        <option value="Leonid chemistry Pvt Ltd">Leonid chemistry Pvt Ltd</option>
+        <option value="Oxford Lab Fine Chem LLP">Oxford Lab Fine Chem LLP</option>
+        <option value="Sri veda synthesis">Sri veda synthesis</option>
+        <option value="Akshaya pure chemichals">Akshaya pure chemichals</option>
+      </select>
+
+</div>
+
+    <div class="col-lg-3"> 
+    <label class="label">Supplier</label>    
+    <select class="form-control select2">
+        <option>Drag or enter a Supplier</option>
+        <option>Supplier 1</option>
+        <option>Supplier 2</option>
+        <option>Supplier 3</option>
+        <option>Supplier 4</option>
+        <option>Supplier 5</option>
+        <option>Supplier 6</option>
+    </select></div>
+
+    <div class="col-lg-3"> 
+        <label class="label">Warehouse City</label>
+    <select class="form-control select2">
+        <option>Drag or enter a Ware house city</option>
+        <option>Ware house city1</option>
+        <option>Ware house city2</option>
+        <option>Ware house city3</option>
+        <option>Ware house city4</option>
+        <option>Ware house city5</option>
+    </select></div>
+
+    <div class="col-lg-2"> 
+    <button class="btn btn-outline-secondary PPR">Reset</button>
+     </div>    
+</div>
+</div>
+</form>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-4 mt-5" id="cards1">
+        <div class="cards p-2 ml-5">
+                <div class="flexcontainer">
+                <div><input type="radio" id="card1" class="checkwr" name="checkwr"></div> 
+               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+            </div>
+            <div class="WRCA">
+                1, Devkaran Mansion, 3rd floor, 79, princess street,
+                Mumbai,Maharashtra,India,400002.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-5 " id="cards2">
+          <div class="cards p-2 ml-4">
+                <div class="flexcontainer">
+                <div><input type="radio" id="card2" class="checkwr" name="checkwr"></div> 
+               <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
+            </div>
+            <div class="WRCA">
+                1, Devkaran Mansion, 3rd floor, 79, princess street,
+                Mumbai,Maharashtra,India,400002.
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 mt-5" id="cards3">
+            <div class="cards p-2 ml-1">
+                  <div class="flexcontainer">
+                  <div><input type="radio" id="card3"  class="checkwr" name="checkwr"></div> 
+                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
+              </div>
+              <div class="WRCA">
+                  1, Devkaran Mansion, 3rd floor, 79, princess street,
+                  Mumbai,Maharashtra,India,400002.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4" id="cards4">
+            <div class="cards p-2 ml-5">
+                  <div class="flexcontainer">
+                  <div><input type="radio" id="card4" class="checkwr" name="checkwr"></div> 
+                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
+              </div>
+              <div class="WRCA">
+                  1, Devkaran Mansion, 3rd floor, 79, princess street,
+                  Mumbai,Maharashtra,India,400002.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4" id="cards5">
+            <div class="cards p-2 ml-4 ">
+                  <div class="flexcontainer">
+                  <div><input type="radio" id="card5"  class="checkwr" name="checkwr"></div> 
+                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
+              </div>
+              <div class="WRCA">
+                  1, Devkaran Mansion, 3rd floor, 79, princess street,
+                  Mumbai,Maharashtra,India,400002.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4" id="cards6">
+            <div class="cards p-2 ml-1" >
+                  <div class="flexcontainer">
+                  <div><input type="radio" id="card6" class="checkwr" name="checkwr"></div> 
+                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
+              </div>
+              <div class="WRCA">
+                  1, Devkaran Mansion, 3rd floor, 79, princess street,
+                  Mumbai,Maharashtra,India,400002.
+              </div>
+            </div>
+          </div>
+
+    </div>
+</div>
+
+<div class="uploadsection" style="display: none;">
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-4 ml-5 mt-4">    
+<form><label class="label">Upload Excel File</label>
+    <input type="file" name="uploadfile" id="file" name="file" onchange="getfileName(this.value)" style="display:none;"/>
+    <label for="file" class="p-2 fileforupload"><span id="fn">Click to Upload File</span><img src="assets/Icons/files-and-folders-to-upload.svg"/></label>
+    <div class="mt-4" disabled><span  id="subbtn" class="px-4 py-2 subbtn" onclick="progress()">Submit</span></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+
+<div class="mt-4 ml-4" id="progressing" style="display: none;">
+    <label class="label">File conversion to CSV</label>
+<div class="progress col-lg-4" style="height:35px;">
+    <div class="progress-bar" role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span id="progresscount"></span></div>
+  </div>
+  <div class="col-lg-2">00.02.35</div>
+</div>
+
+
+
+</section>
+
+</body>
+
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- Jquery Plugin-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+<!--End-->
+<script>
+
+$(document).ready(function(){
+    $('.select2').select2();
+
+    $( ".select2" ).change(function() {
+        $(".cards").css({"display": "block"});
+    });
+    $("#card1").click(function(){
+    $("#cards2,#cards3,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
+    $(".uploadsection").css({"display":"block"});
+    });
+    $("#card2").click(function(){
+    $("#cards1,#cards3,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
+    $(".uploadsection").css({"display":"block"});
+    });
+    $("#card3").click(function(){
+    $("#cards2,#cards1,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
+    $(".uploadsection").css({"display":"block"});
+    });
+    $("#card4").click(function(){
+    $("#cards2,#cards3,#cards1,#cards5,#cards6").css({"display": "none"}).remove();
+    $(".uploadsection").css({"display":"block"});
+    });
+    $("#card5").click(function(){
+    $("#cards2,#cards3,#cards4,#cards1,#cards6").css({"display": "none"}).remove();
+    $(".uploadsection").css({"display":"block"});
+    });
+    $("#card6").click(function(){
+    $("#cards2,#cards3,#cards4,#cards5,#cards1").css({"display": "none"}).remove();
+    $(".uploadsection").css({"display":"block"});
+    });
+
+
+  });
+
+   function getfileName(str){
+    var filename=str;
+    document.getElementById('fn').innerHTML=filename;
+    document.getElementById('fn').style.color="#23282d";
+    document.getElementById('subbtn').disabled = false;
+    document.getElementById("subbtn").style.cssText ="background-color:#3e3ed2";
+    document.getElementById("subbtn").style.cursor="pointer";
+   }
+
+   function progress(){
+    $("#progressing").css({"display": "block"});  
+    var progressBar=$('.progress-bar');
+    var progressNumber = 0;
+    setInterval(function(){
+        progressNumber++;
+        progressBar.css('width',progressNumber + '%');
+        progressBar.attr('aria-valuenow',progressNumber);
+        $('.progresscount').text(progressNumber);
+    },100);
+}
+  </script>
+</html>
