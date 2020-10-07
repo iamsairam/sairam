@@ -8,11 +8,12 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- header starts -->
     <header>
-        <nav class="navbar navbar-expand-sm ">
+        <nav class="navbar navbar-expand-sm" id="navbar">
             <div class="container-fluid ">
                 <span><img src="assets/Icons/Hamburger Menu.svg" class="burgermenu"></span>
                 <a href="index.html" class='navbar-brand'>
@@ -53,15 +54,15 @@
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
                             <a href="index.html" class='text-decoration-none  mt-2 '>
-                                <span class='circle mr-1 font-weight-bold'>&#9711;</span> Dashboard</a>
+                                <span class='circle mr-1 '>&#9711;</span> Dashboard</a>
                         </li>
                         <li>
-                            <a href="view_edit.html" class='text-decoration-none active'>
+                            <a href="view_edit.html" class='text-decoration-none'>
                                 <span class='circle mr-1'>&#9711;</span> View/Edit</a>
                         </li>
                         <li>
-                            <a href="publish.html" class='text-decoration-none'>
-                                <span class='circle mr-1'>&#9711;</span> Publish</a>
+                            <a href="publish.html" class='text-decoration-none active'>
+                                <span class='circle mr-1 font-weight-bold'>&#9711;</span> Publish</a>
                         </li>
                         <li>
                             <a href="discount.html" class='text-decoration-none'>
@@ -79,22 +80,21 @@
     </div>
     <!-- sidebar ends -->
 <section id="view">
-    
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-10">
-                <p class="PPtitle">Publish Products</p>
-            </div>
-            <div class="col-lg-2">
-                <div class="PPD"><span class="PPDC">DOWNLOAD</span></div>
-            </div>
-        </div>
-    </div>
-    <div class="PPselection">
-    <form>
-    <div class="container-fluid PPselect">
-    <div class="row">
-     <div class="col-lg-3"> 
+<div class="container" style="max-width: 1600px !important;padding-left: 40px;padding-right:170px;">
+
+  <div>
+  <span class="ProductTitle">Publish Products</span>
+  <span class="ProductDownload">
+    <img src="assets/Icons/download-icon.svg">
+    <button class="PDBtn">DOWNLOAD</button>
+  </span>
+</div>
+
+<div class="selectionbar">
+<form>
+  <div class="row" style="justify-content: space-evenly;">
+
+    <div class="col-4" > 
     <label class="label">Supplier Business</label>
     <select class="form-control select2">
         <option>Drag or enter a business name</option>
@@ -109,10 +109,9 @@
         <option value="Sri veda synthesis">Sri veda synthesis</option>
         <option value="Akshaya pure chemichals">Akshaya pure chemichals</option>
       </select>
+    </div>
 
-</div>
-
-    <div class="col-lg-3"> 
+    <div class="col-4"> 
     <label class="label">Supplier</label>    
     <select class="form-control select2">
         <option>Drag or enter a Supplier</option>
@@ -122,9 +121,10 @@
         <option>Supplier 4</option>
         <option>Supplier 5</option>
         <option>Supplier 6</option>
-    </select></div>
+    </select>
+    </div>
 
-    <div class="col-lg-3"> 
+    <div class="col-4"> 
         <label class="label">Warehouse City</label>
     <select class="form-control select2">
         <option>Drag or enter a Ware house city</option>
@@ -133,123 +133,417 @@
         <option>Ware house city3</option>
         <option>Ware house city4</option>
         <option>Ware house city5</option>
-    </select></div>
-
-    <div class="col-lg-2"> 
-    <button class="btn btn-outline-secondary PPR">Reset</button>
-     </div>    
-</div>
-</div>
+    </select>
+    </div>
+  </div>
 </form>
 </div>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-lg-4 mt-5" id="cards1">
-        <div class="cards p-2 ml-5">
+<div class="warehouses">
+<div class="row">
+  <div class="col-4 first"  id="cards1">
+            <div class="cards">
                 <div class="flexcontainer">
                 <div><input type="radio" id="card1" class="checkwr" name="checkwr"></div> 
                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
                 1, Devkaran Mansion, 3rd floor, 79, princess street,
-                Mumbai,Maharashtra,India,400002.
+                Mumbai, Maharashtra, India,  400002.
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-4 mt-5 " id="cards2">
-          <div class="cards p-2 ml-4">
+  </div>
+    <div class="col-4 first" id="cards2">
+            <div class="cards">
                 <div class="flexcontainer">
                 <div><input type="radio" id="card2" class="checkwr" name="checkwr"></div> 
-               <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
+               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
                 1, Devkaran Mansion, 3rd floor, 79, princess street,
-                Mumbai,Maharashtra,India,400002.
+                Mumbai, Maharashtra, India,  400002.
             </div>
           </div>
-        </div>
-
-        <div class="col-lg-4 mt-5" id="cards3">
-            <div class="cards p-2 ml-1">
-                  <div class="flexcontainer">
-                  <div><input type="radio" id="card3"  class="checkwr" name="checkwr"></div> 
-                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
-              </div>
-              <div class="WRCA">
-                  1, Devkaran Mansion, 3rd floor, 79, princess street,
-                  Mumbai,Maharashtra,India,400002.
-              </div>
+  </div>
+    <div class="col-4 first" id="cards3">
+            <div class="cards">
+                <div class="flexcontainer">
+                <div><input type="radio" id="card3" class="checkwr" name="checkwr"></div> 
+               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+            </div>
+            <div class="WRCA">
+                1, Devkaran Mansion, 3rd floor, 79, princess street,
+                Mumbai, Maharashtra, India,  400002.
             </div>
           </div>
-
-          <div class="col-lg-4 mt-4" id="cards4">
-            <div class="cards p-2 ml-5">
-                  <div class="flexcontainer">
-                  <div><input type="radio" id="card4" class="checkwr" name="checkwr"></div> 
-                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
-              </div>
-              <div class="WRCA">
-                  1, Devkaran Mansion, 3rd floor, 79, princess street,
-                  Mumbai,Maharashtra,India,400002.
-              </div>
+  </div>
+    <div class="col-4 second"  id="cards4">
+            <div class="cards">
+                <div class="flexcontainer">
+                <div><input type="radio" id="card4" class="checkwr" name="checkwr"></div> 
+               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+            </div>
+            <div class="WRCA">
+                1,Devkaran Mansion, 3rd floor, 79, princess street,
+                Mumbai, Maharashtra, India, 400002.
             </div>
           </div>
-
-          <div class="col-lg-4 mt-4" id="cards5">
-            <div class="cards p-2 ml-4 ">
-                  <div class="flexcontainer">
-                  <div><input type="radio" id="card5"  class="checkwr" name="checkwr"></div> 
-                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
-              </div>
-              <div class="WRCA">
-                  1, Devkaran Mansion, 3rd floor, 79, princess street,
-                  Mumbai,Maharashtra,India,400002.
-              </div>
+  </div>
+      <div class="col-4 second" id="cards5">
+            <div class="cards">
+                <div class="flexcontainer">
+                <div><input type="radio" id="card5" class="checkwr" name="checkwr"></div> 
+               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+            </div>
+            <div class="WRCA">
+                1, Devkaran Mansion, 3rd floor, 79, princess street,
+                Mumbai, Maharashtra, India,  400002.
             </div>
           </div>
-
-          <div class="col-lg-4 mt-4" id="cards6">
-            <div class="cards p-2 ml-1" >
-                  <div class="flexcontainer">
-                  <div><input type="radio" id="card6" class="checkwr" name="checkwr"></div> 
-                 <div class=" WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive ">Active</span></div>
-              </div>
-              <div class="WRCA">
-                  1, Devkaran Mansion, 3rd floor, 79, princess street,
-                  Mumbai,Maharashtra,India,400002.
-              </div>
+  </div>
+      <section class="col-4 second" id="cards6">
+            <section class="cards">
+                <div class="flexcontainer">
+                <div><input type="radio" id="card6" class="checkwr" name="checkwr"></div> 
+               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
-          </div>
-
-    </div>
+            <div class="WRCA">
+                1,Devkaran Mansion, 3rd floor, 79, princess street,
+                Mumbai, Maharashtra, India,  400002.
+            </div>
+          </section>
+        </section>
+</div>
 </div>
 
-<div class="uploadsection" style="display: none;">
-<div class="container-fluid">
+<div  class="uploadsection" style="display: none;margin-top: 30px;">
 <div class="row">
-<div class="col-lg-4 ml-5 mt-4">    
+<div class="col-lg-4">    
 <form><label class="label">Upload Excel File</label>
     <input type="file" name="uploadfile" id="file" name="file" onchange="getfileName(this.value)" style="display:none;"/>
     <label for="file" class="p-2 fileforupload"><span id="fn">Click to Upload File</span><img src="assets/Icons/files-and-folders-to-upload.svg"/></label>
-    <div class="mt-4" disabled><span  id="subbtn" class="px-4 py-2 subbtn" onclick="progress()">Submit</span></div>
+    <div disabled style="margin-top: 40px;"><span  id="subbtn" class="px-4 py-2 subbtn" onclick="progress()">Submit</span></div>
 </form>
 </div>
 </div>
 </div>
+
+
+<div>
+<div class="pbt"  style="display: none;">
+    <div class="row">
+        <div class="col-lg-4">
+            <div>
+                <label class="label" id="progressing" style="">File conversion to CSV</label>
+                <div class="progress-container">
+                    <div id="progress" class="progress" style="display:none; height:40px; width:0%;background-color: #61bc08; color: #f1f1f1;line-height:40px;font-size: 16px;display: flex;flex-direction: column;">0%</div>
+                  </div>
+                </div>
+        </div>
+        <div class="col-lg-2" style="height:41px;">
+         <p class="Totaltime TT1" id="progress"><span id="TT01">00:00:00</span></p>
+        </div>
+    </div>
 </div>
 
-<div class="mt-4 ml-4" id="progressing" style="display: none;">
-    <label class="label">File conversion to CSV</label>
-<div class="progress col-lg-4" style="height:35px;">
-    <div class="progress-bar" role="progressbar" style="width:0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span id="progresscount"></span></div>
+<div class="pbt" style="display: none;">
+    <div class="row">
+        <div class="col-lg-4">
+            <div style="">
+                    <label class="label">Validation</label>
+                <div class="progress-container" style="height: 41px;" id="progressing1" >
+                    <div id="progress1" class="progress" style="display: none; height: 40px;width:0%;background-color: #61bc08; color: #f1f1f1;line-height: 40px;font-size: 16px;display: flex;flex-direction: column">0%</div>
+                  </div>
+                </div>
+        </div>
+        <div class="col-lg-2" style="height: 41px;">
+         <p class="Totaltime TT2" id="progress1"><span id="TT02">00:00:00</span></p>
+        </div>
+    </div>
+</div>
+
+<div class="pbt"  style="display:none;">
+    <div class="row">
+        <div class="col-lg-4">
+            <div style="">
+                    <label class="label">Staging Table1</label>
+                <div class="progress-container" id="progressing2" style="height: 41px;">
+                    <div id="progress2" class="progress" style="display:none;height: 40px;width:0%;background-color: #61bc08; color: #f4f7fc;line-height:40px;font-size: 16px;display: flex;flex-direction: column">
+                    </div>
+                  </div>
+                </div>
+        </div>
+        <div class="col-lg-2" style="height: 41px;">
+         <p class="Totaltime TT3" id="progress2"><span id="TT03">00:00:00</span></p>
+        </div>
+    </div>
+</div>
+
+<div class="pbt" style="display: none;" id="pubbtndiv">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="my-3">
+                <button  id="pubbtn" class="px-4 py-2 pubbtn" onclick="spin()" data-toggle="modal" data-target="#exampleModal" disabled>Publish</span>
+                <span style="display: none;" id="spinnerr" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="assets/Icons/SuccessModal.svg" height="245px" width="374px">
+          <p style="font-weight: 18px; color: #23282d;margin-top:25px;" class="modal-title" id="exampleModalLabel">Products Uploaded Successfully</p>
+        <button style="color: #ffffff;font-weight: 600;font-size: 16px;background-color: #3e3ed2;padding:10px 30px 10px 30px;margin-top:35px;" type="button" class="btn btn-primary" data-dismiss="modal" onclick="{location.reload();}">Done</button>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-lg-2">00.02.35</div>
+<!--Modal Ended-->
+
+<div class="error">
+<div class="description text-center">Error Description</div>
+<div><!--
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptates hic asperiores ducimus veniam eos laboriosam illum culpa facilis similique sapiente laudantium nulla fuga nam, repellendus nobis, aperiam adipisci consectetur.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident soluta laboriosam, laborum dolores assumenda, adipisci enim, nobis tempora debitis voluptatum fugit. Porro quibusdam, mollitia dolore vel architecto necessitatibus tempora veritatis!
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed delectus labore neque sint consectetur dicta quos quidem tempora. A dicta nesciunt iure ut ipsa cupiditate amet hic, voluptates ipsam repudiandae.
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. At sunt excepturi corporis, ipsum pariatur voluptatem expedita et quidem incidunt placeat assumenda harum. Nesciunt voluptate animi reprehenderit! Vitae omnis magni ea.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit placeat laboriosam soluta, dicta cumque eum voluptatibus quisquam sequi. Nesciunt amet alias doloremque eaque! Laborum veritatis placeat necessitatibus praesentium laboriosam odio?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, accusantium corrupti. Minus necessitatibus blanditiis asperiores harum consequuntur molestiae quae fugit consequatur ea ducimus voluptas, quam aliquid dolor provident! Necessitatibus, nam?
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quo, suscipit quas asperiores modi magni ipsa aut quam cumque unde! Nostrum officia culpa expedita tempore tempora id laboriosam nisi iure.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, voluptatum voluptate illum dolore earum adipisci odio reiciendis quod temporibus eos ex atque culpa voluptatem quibusdam fuga at nemo quia cum!
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente adipisci vitae quae optio aperiam illum consequatur corporis temporibus? Libero ex nulla eligendi repudiandae debitis quae rem accusantium adipisci cum doloribus!
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam vero laborum. Veritatis, magni placeat aliquam nesciunt nostrum voluptates ipsam alias delectus, rem tenetur excepturi eligendi perspiciatis. Saepe, adipisci.-->
+</div>
+</div>
+
+<div style="position:fixed; right:80px;bottom:20px;">
+<div class="plusicon">
+    <a href="#" class='addwh'  data-toggle="modal" data-target="#extraLargeModal">+</a>
+</div>
+</div>
+<!--Modal-->
+<!-- Modal -->
+<div id="extraLargeModal" class="modal fade"  role="dialog">
+  <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="container">
+              <h5 class="modal-title text-center my-3">Add New Warehouse
+              <span id="modal-close" class="close float-right" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times-circle"></i></span>
+            </h5>
+            <div class="row">
+              <div class="col px-5">
+              <form id="modal-form">
+                <div class="form-row">
+                  <div class="form-group col-md-6 pr-3">
+                    <label for="modalBusinessname">Supplier Business Name</label>
+                    <select id="modalBusinessname" class="form-control select2" required>
+                      <option selected value=''>Drag or enter a business name</option>
+                      <option value='1'>one</option>
+                      <option value='2'>two</option>
+                      <option value='3'>three</option>
+                      <option value='4'>four</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group col-md-6 pl-3">
+                    <label for="modalSupplier">Supplier</label>
+                    <select id="modalSupplier" class="form-control select2" required>
+                      <option selected value=''>Drag or enter a business name</option>
+                      <option value='1'>one</option>
+                      <option value='2'>two</option>
+                      <option value='3'>three</option>
+                      <option value='4'>four</option>
+                      </select>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6  pr-3">
+                      <label for="GST">GST</label>
+                      <input type="number" class="form-control" id="modalGST" required>
+                    </div>
+                    <div class="form-group col-md-6  pl-3">
+                      <label for="shortname">Short Name</label>
+                      <input type="text" class="form-control" id="shortname" placeholder="Reference name">
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-12">
+                        <label for="address">Address</label>
+                        <textarea class="form-control"  id="address" required></textarea>
+                      </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6  pr-3">
+                      <label for="city">City</label>
+                      <select id="city" class="form-control select2" required>
+                        <option selected value=''>Drag or enter a business name</option>
+                      <option value='1'>one</option>
+                      <option value='2'>two</option>
+                      <option value='3'>three</option>
+                      <option value='4'>four</option>
+                      </select>
+                    </div>
+                    <div class="form-group col-md-6  pl-3">
+                      <label for="state">State</label>
+                      <select id="state" class="form-control select2" required>
+                        <option selected value=''>Drag or enter a business name</option>
+                      <option value='1'>one</option>
+                      <option value='2'>two</option>
+                      <option value='3'>three</option>
+                      <option value='4'>four</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6  pr-3">
+                      <label for="country">Country</label>
+                      <!-- <select id="country" class="form-control">
+                        <option selected disabled>India</option>
+                        <option>...</option>
+                      </select> -->
+                      <input type="text" class="form-control" id="country" placeholder="India" disabled>
+                    </div>
+                    <div class="form-group col-md-6  pl-3">
+                      <label for="postalcode">Postal Code</label>
+                      <input type="number" class="form-control" id="postalcode" placeholder="Enter postal code" required>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-8">
+                      <label for="accType">Accredited Type</label>
+                      <div class="form-inline">
+                        <input type="radio" class="form-control radio" name='accType' id="iso" value='iso' checked>ISO
+                      <input type="radio" class="form-control radio" name='accType' id="gmp" value='gmp'>GMP
+                      <input type="radio" class="form-control radio" name='accType' id="fda" value='fda'>FDA
+                      <input type="radio" class="form-control radio" name='accType' id="custom" value='custom'>Custom Synthesis
+                      <input type="radio" class="form-control radio" name='accType' id="none" value='none'>None
+                      </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                      <label for="status">Status</label>
+                      <div class="form-inline">
+                        <input type="radio" class="form-control"  name="modalstatus" value="Active" checked id="activeid"> Active
+                      <input type="radio" class="form-control"  name="modalstatus" value="Deactive" id="inactiveid"> Inactive
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="form-row" id='uploadIso'>
+                    <div class="form-group col-12">
+                      <label for="uploadIso">Upload ISO Certificate</label>
+                      <div class='d-flex'>
+                        <div class="input-group w-50 mr-4">
+                          <input type="text" id="pdfname" class="form-control form-control-lg border-right-0" required>
+                          <div class="input-group-append">
+                            <span class="input-group-text" style='background:none;'><img src="assets/view/pdfImg.svg"></span>
+                          </div>
+                        </div>
+                            <button class="file btn upload" type="button" id="uploadPdfBtn">
+                               Upload
+                            </button>
+                            <div style="width: 0;display: none;">
+                              <input id="uploadPdf" type="file" name="file" 
+                              accept=".pdf,.doc" onchange="showdocument(this)"/>
+                            </div>
+                        
+                      </div>
+                      <div class='attachText'>*Attach only as a PDF</div>
+                    </div>
+                  </div>
+
+                <div class="col">
+                  <h5 class=" my-4 text-center">Approver Details</h5>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6 pr-3">
+                        <label for="apprName">Name</label>
+                        <input type="text" class="form-control" id="apprName" placeholder="Enter seller approver name" required>
+                      </div>
+                      <div class="form-group col-md-6 pl-3">
+                        <label for="apprMail">Email</label>
+                        <input type="email" class="form-control" id="apprMail" placeholder="Enter seller approver email" required>
+                      </div>
+                </div>
+
+                
+                <div class="form-row">
+                  <div class="form-group col">
+                    <label for="mblNo">Mobile No.</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text number-padng" style='background:none;'> +91</span>
+                      </div>
+                      <input type="number" class="form-control" id="mblNo" placeholder="9999999" required>
+                    </div>
+                  </div>
+
+                  <div class="form-group col text-center">
+                    <label for="blkQty" class='text-center blkQty'>Block Quantity Request</label>
+                    <div class="btn-group">
+                      <button type="button" class="yesbtn" id='yesbtn'>Yes</button>
+                      <button type="button" class="yesbtn border-left-0 nobtn" id='nobtn'>No</button>
+                    </div>
+                  </div>
+
+                  <div class="form-group col">
+                    <label for="serviceCharge">Seller Service Charge</label>
+                    <div class="btn-group" >
+                      <button type="button" class="selleractive" id='sellerActive'>Active</button>
+                      <button type="button" class="selleractive border-left-0 seller-de"  id='sellerdeactive'>Deactive</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-row" id='showRow'>
+                  <div class="form-group col-md-6 pr-3">
+                      <label for="scNwprod">SC for New Product</label>
+                      <div class="d-flex align-items-center">
+                      <input type="number" class="form-control w-25 mr-2" id="scNwprod"><span>%</span>
+                      </div>
+                  </div>
+                    <div class="form-group col-md-6 pl-3">
+                      <label for="scDiscprod">SC for Discount Product</label>
+                      <div class="d-flex align-items-center">
+                      <input type="number" class="form-control w-25  mr-2" id="scDiscprod"><span>%</span>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-12">
+                      <label for="addNotes">Additional Notes</label>
+                      <textarea class="form-control"  id="addNotes" maxlength="100" required></textarea>
+                      <div class='max-length'>(Max length 100 characters)</div>
+                    </div>
+                </div>
+
+                <div class="col  d-flex justify-content-center align-items-center">
+                  <button type='submit' value='submit' class='btn modal-save mb-4'>SAVE</button>
+                </div>
+              </form>
+            </div>
+            </div>
+        </div>    
+      </div>
+  </div>
 </div>
 
 
 
+
+
+</div>
+</div>        
 </section>
 
 </body>
@@ -260,7 +554,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <!-- Jquery Plugin-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
+<link href="select2.min.css" rel="stylesheet" />
 <!--End-->
 <script>
 
@@ -270,30 +564,37 @@ $(document).ready(function(){
     $( ".select2" ).change(function() {
         $(".cards").css({"display": "block"});
     });
-    $("#card1").click(function(){
+    $("#card1,#cards1").click(function(){
     $("#cards2,#cards3,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
     $(".uploadsection").css({"display":"block"});
+    $("#card1").attr("checked","true");
     });
-    $("#card2").click(function(){
+    $("#card2,#cards2").click(function(){
     $("#cards1,#cards3,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
     $(".uploadsection").css({"display":"block"});
+    $("#card2").attr("checked","true");
     });
-    $("#card3").click(function(){
+    $("#card3,#cards3").click(function(){
     $("#cards2,#cards1,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
     $(".uploadsection").css({"display":"block"});
+    $("#card3").attr("checked","true");
     });
-    $("#card4").click(function(){
+    $("#card4,#cards4").click(function(){
     $("#cards2,#cards3,#cards1,#cards5,#cards6").css({"display": "none"}).remove();
     $(".uploadsection").css({"display":"block"});
+    $("#card1").attr("checked","true");
     });
-    $("#card5").click(function(){
+    $("#card5,#cards5").click(function(){
     $("#cards2,#cards3,#cards4,#cards1,#cards6").css({"display": "none"}).remove();
     $(".uploadsection").css({"display":"block"});
+    $("#card5").attr("checked","true");
     });
-    $("#card6").click(function(){
+    $("#card6,#cards6").click(function(){
     $("#cards2,#cards3,#cards4,#cards5,#cards1").css({"display": "none"}).remove();
     $(".uploadsection").css({"display":"block"});
+    $("#card6").attr("checked","true");
     });
+    
 
 
   });
@@ -308,15 +609,151 @@ $(document).ready(function(){
    }
 
    function progress(){
-    $("#progressing").css({"display": "block"});  
-    var progressBar=$('.progress-bar');
-    var progressNumber = 0;
-    setInterval(function(){
-        progressNumber++;
-        progressBar.css('width',progressNumber + '%');
-        progressBar.attr('aria-valuenow',progressNumber);
-        $('.progresscount').text(progressNumber);
-    },100);
+    $(".pbt").css({"display":"block"});   
+    $("#progressing").css({"display": "block"}); 
+    var widthValue = 0;
+    var elem = document.getElementById("progress");
+    var widthAnim  = widthValue;
+ 
+  var id = setInterval(frame,50);
+  var widthIncrement = 100;
+  widthValue = widthAnim  + widthIncrement;
+  function frame() {
+    if (widthAnim  >= widthValue || widthValue > 100) {
+      clearInterval(id);
+      //button.disabled = true;
+    } else {
+      widthAnim ++;
+      elem.style.width = widthAnim  + '%';
+      elem.style.textAlign='right';
+      elem.innerHTML = widthAnim  * 1 + '%' + '&nbsp;&nbsp;&nbsp;&nbsp;';
+    }
+  }
+  $(".error").css({"display": "block"});
+  setTimeout(function(){progress1();}, 5000);
+  timer1();
+
 }
-  </script>
+
+function progress1(){
+    $("#progressing1,.TT1").css({"display": "block"}); 
+    var widthValue1 = 0;
+    var elem1 = document.getElementById("progress1");
+    var widthAnim1  = widthValue1;
+ 
+  var id = setInterval(frame,50);
+  var widthIncrement = 100;
+  widthValue1 = widthAnim1  + widthIncrement;
+  function frame() {
+    if (widthAnim1  >= widthValue1 || widthValue1 > 100) {
+      clearInterval(id);
+      //button.disabled = true;
+    } else {
+      widthAnim1 ++;
+      elem1.style.width = widthAnim1  + '%';
+      elem1.style.textAlign='right';
+      elem1.innerHTML = widthAnim1  * 1 + '%'+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+    }
+  }
+  setTimeout(function(){progress2();}, 5000);
+  timer2();
+}
+
+function progress2(){
+    $("#progressing2,.TT2").css({"display": "block"}); 
+var widthValue2  = 0;    
+var elem2  = document.getElementById("progress2");
+var widthAnim2 = widthValue2 ;
+ 
+  var id = setInterval(frame,50);
+  var widthIncrement = 100;
+  widthValue2  = widthAnim2 + widthIncrement;
+  function frame() {
+    if (widthAnim2 >= widthValue2  || widthValue2  > 100) {
+      clearInterval(id);
+      //button.disabled = true;
+    } else {
+      widthAnim2++;
+      elem2 .style.width = widthAnim2 + '%';
+      elem2.style.textAlign='right';
+      elem2 .innerHTML = widthAnim2 * 1 + '%'+ '&nbsp;&nbsp;&nbsp;&nbsp;';
+    }
+  }
+  setTimeout(function(){publishbtn();},5000);
+  timer3();
+}
+
+function publishbtn(){
+    $(".TT3").css({"display": "block"}); 
+    document.getElementById('pubbtndiv').style.display='block';
+    document.getElementById('pubbtn').disabled = false;
+    document.getElementById("pubbtn").style.cssText ="background-color:#3e3ed2";
+    document.getElementById("pubbtn").style.cursor="pointer";
+}
+function spin(){
+    document.getElementById('spinnerr').style.display='inline-block'; 
+    setTimeout(function(){modallaunch();},1000);
+}
+function modallaunch(){
+    document.getElementById('spinnerr').style.display='none';
+    $(".error").css({"display": "none"});
+}
+
+</script>
+<script>
+  function timer1(){
+  let widthValue = 0;
+  let elem = document.getElementById("TT01");
+  let widthAnim  = widthValue;
+
+let id = setInterval(frame,500);
+let widthIncrement = 10;
+widthValue = widthAnim  + widthIncrement;
+function frame() {
+  if (widthAnim  >= widthValue || widthValue > 10) {
+    clearInterval(id);
+    //button.disabled = true;
+  } else {
+    widthAnim ++;
+    elem.innerHTML ="00.00."+ widthAnim  * 1;
+  }
+}
+}  function timer3(){
+  let widthValue = 0;
+  let elem = document.getElementById("TT03");
+  let widthAnim  = widthValue;
+
+let id = setInterval(frame,500);
+let widthIncrement = 10;
+widthValue = widthAnim  + widthIncrement;
+function frame() {
+  if (widthAnim  >= widthValue || widthValue > 10) {
+    clearInterval(id);
+    //button.disabled = true;
+  } else {
+    widthAnim ++;
+    elem.innerHTML ="00.00."+ widthAnim  * 1;
+  }
+}
+}  function timer2(){
+  let widthValue = 0;
+  let elem = document.getElementById("TT02");
+  let widthAnim  = widthValue;
+
+let id = setInterval(frame,500);
+let widthIncrement = 10;
+widthValue = widthAnim  + widthIncrement;
+function frame() {
+  if (widthAnim  >= widthValue || widthValue > 10) {
+    clearInterval(id);
+    //button.disabled = true;
+  } else {
+    widthAnim ++;
+    elem.innerHTML ="00.00."+ widthAnim  * 1;
+  }
+}
+}
+
+
+</script>
 </html>
