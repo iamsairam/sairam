@@ -9,7 +9,7 @@ body{
   background:#f4f7fc;
 }
 
-/*========= header========== */
+/* ========= header========== */
 header{
   height: 47px;
   background-image: linear-gradient(91deg, #3f3fd4 0%, #0c0c66 99%);
@@ -243,14 +243,27 @@ border-radius: 5px;
 .plusicon{
 width:45px;
 height: 45px;
-opacity: 0.50;
-background-color: #0c0c66;
 border-radius: 25px; 
 line-height: 45px;
 text-align:center; 
 font-size:50px;
 font-weight: 600;
+background-color: #0c0c66;
+opacity: 0.5;
 }
+
+.plusicon:hover{
+  width:45px;
+height: 45px;
+border-radius: 25px; 
+line-height: 45px;
+text-align:center; 
+font-size:50px;
+font-weight: 600;
+background-color: #0c0c66;
+opacity: 0.9;
+}
+
 .plusicon a{
 text-decoration: none;
 color: #f1f1f1;
@@ -564,8 +577,11 @@ color:#fff;
   #extraLargeModal .modal-dialog{
     margin-top:0;
     margin-bottom:0;
-    margin-left:40%;
+    margin-left:0;
     margin-right:0;
+    min-height: 100vh;
+    float: right;
+    min-width:900px;
   }
   #extraLargeModal .modal-content{
     width:90%;
@@ -593,7 +609,7 @@ color:#fff;
   }
   .attachText{
     position: relative;
-    left:29%;
+    left:24%;
     color:#aaa;
     font-weight: bold;
   }
@@ -619,7 +635,7 @@ color:#fff;
     outline:none;
   }
   .nobtn{
-    background:#0c0c66;
+    background:rgb(62, 62, 210);;
     color:#fff;
   }
   .selleractive{
@@ -636,7 +652,7 @@ color:#fff;
     background:none;
     padding:0px 10px;
     color:#fff;
-    background:#0c0c66;
+    background:rgb(62, 62, 210);
   }
   .max-length{
     color:#aaa;
@@ -646,7 +662,7 @@ color:#fff;
   }
   .modal-save{
     width: 140px;
-    background-image: linear-gradient(to bottom, #1ed8ca, #008884);
+    background-color:rgb(62, 62, 210);
     color:#fff;
     font-weight: 600;
     outline:none !important;
@@ -687,10 +703,12 @@ border: 1px solid #aaa;
 border-radius: 4px;
 height: 34px;
 }
+
 #extraLargeModal .select2-container--default .select2-selection--single .select2-selection__rendered {
 color: #444;
 line-height: 30px;
 }
+
 #extraLargeModal .select2-container--default .select2-selection--single .select2-selection__arrow {
 height: 30px;
 position: absolute;
@@ -698,6 +716,7 @@ top: 1px;
 right: 1px;
 width: 20px;
 }
+
 #extraLargeModal label{
   display:block !important;
 }
@@ -708,10 +727,20 @@ width: 20px;
   margin-right:20px;
   margin-bottom:10px;
 }
-
-
+/* 
 #labeled {
 margin-right: 50px;
 margin-left: 30px;
 color: #647589;
+} */
+.form-row{
+  margin-top:16px;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+}
+
+.ISOTXT{
+  font-size: 14px !important;
 }

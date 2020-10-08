@@ -9,7 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style2.css">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-</head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="select2.min.css" rel="stylesheet" />
+  </head>
 <body>
     <!-- header starts -->
     <header>
@@ -41,7 +43,7 @@
         <!-- Sidebar -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h6 class='font-weight-bold'>MAIN NAVIGATION</h6>
+                <h6 class='font-weight-bold'>MAIN NAVIGATION </h6>
             </div>
 
             <ul class="list-unstyled components">
@@ -241,7 +243,7 @@
                 </div>
         </div>
         <div class="col-lg-2" style="height:41px;">
-         <p class="Totaltime TT1" id="progress"><span id="TT01">00:00:00</span></p>
+         <p class="Totaltime TT1" id="progress">00:00:<span id="TT001">0</span><span id="TT01">0</span></p>
         </div>
     </div>
 </div>
@@ -257,7 +259,7 @@
                 </div>
         </div>
         <div class="col-lg-2" style="height: 41px;">
-         <p class="Totaltime TT2" id="progress1"><span id="TT02">00:00:00</span></p>
+         <p class="Totaltime TT2" id="progress1">00:00:<span id="TT002">0</span><span id="TT02">0</span></p>
         </div>
     </div>
 </div>
@@ -274,7 +276,7 @@
                 </div>
         </div>
         <div class="col-lg-2" style="height: 41px;">
-         <p class="Totaltime TT3" id="progress2"><span id="TT03">00:00:00</span></p>
+         <p class="Totaltime TT3" id="progress2">00:00:<span id="TT003">0</span><span id="TT03">0</span></p>
         </div>
     </div>
 </div>
@@ -321,9 +323,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 </div>
 </div>
 
-<div style="position:fixed; right:80px;bottom:20px;">
-<div class="plusicon">
-    <a href="#" class='addwh'  data-toggle="modal" data-target="#extraLargeModal">+</a>
+<div style="position:fixed;right:80px;bottom:20px;">
+<div class="plusicon plusiconchange" id="pluss">
+    <a href="#" class='addwh'  data-toggle="modal" data-target="#extraLargeModal">
+      +
+    </a>
 </div>
 </div>
 <!--Modal-->
@@ -340,7 +344,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
               <form id="modal-form">
                 <div class="form-row">
                   <div class="form-group col-md-6 pr-3">
-                    <label for="modalBusinessname">Supplier Business Name</label>
+                    <label class="label" for="modalBusinessname">Supplier Business Name</label>
                     <select id="modalBusinessname" class="form-control select2" required>
                       <option selected value=''>Drag or enter a business name</option>
                       <option value='1'>one</option>
@@ -351,7 +355,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                   </div>
 
                   <div class="form-group col-md-6 pl-3">
-                    <label for="modalSupplier">Supplier</label>
+                    <label class="label" for="modalSupplier">Supplier</label>
                     <select id="modalSupplier" class="form-control select2" required>
                       <option selected value=''>Drag or enter a business name</option>
                       <option value='1'>one</option>
@@ -364,25 +368,25 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 
                 <div class="form-row">
                     <div class="form-group col-md-6  pr-3">
-                      <label for="GST">GST</label>
+                      <label for="GST" class="label">GST</label>
                       <input type="number" class="form-control" id="modalGST" required>
                     </div>
                     <div class="form-group col-md-6  pl-3">
-                      <label for="shortname">Short Name</label>
+                      <label for="shortname" class="label">Short Name</label>
                       <input type="text" class="form-control" id="shortname" placeholder="Reference name">
                     </div>
                   </div>
 
                   <div class="form-row">
                     <div class="form-group col-12">
-                        <label for="address">Address</label>
+                        <label for="address" class="label">Address</label>
                         <textarea class="form-control"  id="address" required></textarea>
                       </div>
                   </div>
 
                   <div class="form-row">
                     <div class="form-group col-md-6  pr-3">
-                      <label for="city">City</label>
+                      <label for="city" class="label">City</label>
                       <select id="city" class="form-control select2" required>
                         <option selected value=''>Drag or enter a business name</option>
                       <option value='1'>one</option>
@@ -392,7 +396,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                       </select>
                     </div>
                     <div class="form-group col-md-6  pl-3">
-                      <label for="state">State</label>
+                      <label for="state" class="label">State</label>
                       <select id="state" class="form-control select2" required>
                         <option selected value=''>Drag or enter a business name</option>
                       <option value='1'>one</option>
@@ -405,7 +409,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 
                   <div class="form-row">
                     <div class="form-group col-md-6  pr-3">
-                      <label for="country">Country</label>
+                      <label for="country" class="label">Country</label>
                       <!-- <select id="country" class="form-control">
                         <option selected disabled>India</option>
                         <option>...</option>
@@ -413,24 +417,24 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                       <input type="text" class="form-control" id="country" placeholder="India" disabled>
                     </div>
                     <div class="form-group col-md-6  pl-3">
-                      <label for="postalcode">Postal Code</label>
+                      <label for="postalcode" class="label">Postal Code</label>
                       <input type="number" class="form-control" id="postalcode" placeholder="Enter postal code" required>
                     </div>
                   </div>
 
                   <div class="form-row">
                     <div class="form-group col-md-8">
-                      <label for="accType">Accredited Type</label>
+                      <label for="accType" class="label">Accredited Type</label>
                       <div class="form-inline">
-                        <input type="radio" class="form-control radio" name='accType' id="iso" value='iso' checked>ISO
-                      <input type="radio" class="form-control radio" name='accType' id="gmp" value='gmp'>GMP
-                      <input type="radio" class="form-control radio" name='accType' id="fda" value='fda'>FDA
-                      <input type="radio" class="form-control radio" name='accType' id="custom" value='custom'>Custom Synthesis
-                      <input type="radio" class="form-control radio" name='accType' id="none" value='none'>None
+                        <input type="radio" class="form-control radio" name='accType' id="iso" value='iso' checked><span class="ISOTXT">ISO</span>
+                      <input type="radio" class="form-control radio" name='accType' id="gmp" value='gmp'><span class="ISOTXT">GMP</span>
+                      <input type="radio" class="form-control radio" name='accType' id="fda" value='fda'><span class="ISOTXT">FDA</span>
+                      <input type="radio" class="form-control radio" name='accType' id="custom" value='custom'><span class="ISOTXT">Custom Synthesis</span>
+                      <input type="radio" class="form-control radio" name='accType' id="none" value='none'><span class="ISOTXT">None</span>
                       </div>
                     </div>
                     <div class="form-group col-md-4">
-                      <label for="status">Status</label>
+                      <label for="status" class="label">Status</label>
                       <div class="form-inline">
                         <input type="radio" class="form-control"  name="modalstatus" value="Active" checked id="activeid"> Active
                       <input type="radio" class="form-control"  name="modalstatus" value="Deactive" id="inactiveid"> Inactive
@@ -440,12 +444,12 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 
                   <div class="form-row" id='uploadIso'>
                     <div class="form-group col-12">
-                      <label for="uploadIso">Upload ISO Certificate</label>
+                      <label id="selectedAcc" for="uploadIso" class="label">Upload ISO Certificate</label>
                       <div class='d-flex'>
                         <div class="input-group w-50 mr-4">
                           <input type="text" id="pdfname" class="form-control form-control-lg border-right-0" required>
                           <div class="input-group-append">
-                            <span class="input-group-text" style='background:none;'><img src="assets/view/pdfImg.svg"></span>
+                            <span class="input-group-text" style='background:none;'><img src="assets/Icons/pdfImg.svg"></span>
                           </div>
                         </div>
                             <button class="file btn upload" type="button" id="uploadPdfBtn">
@@ -466,11 +470,11 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6 pr-3">
-                        <label for="apprName">Name</label>
+                        <label for="apprName" class="label">Name</label>
                         <input type="text" class="form-control" id="apprName" placeholder="Enter seller approver name" required>
                       </div>
                       <div class="form-group col-md-6 pl-3">
-                        <label for="apprMail">Email</label>
+                        <label for="apprMail" class="label">Email</label>
                         <input type="email" class="form-control" id="apprMail" placeholder="Enter seller approver email" required>
                       </div>
                 </div>
@@ -478,7 +482,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                 
                 <div class="form-row">
                   <div class="form-group col">
-                    <label for="mblNo">Mobile No.</label>
+                    <label for="mblNo" class="label">Mobile No.</label>
                     <div class="input-group">
                       <div class="input-group-prepend">
                         <span class="input-group-text number-padng" style='background:none;'> +91</span>
@@ -488,7 +492,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                   </div>
 
                   <div class="form-group col text-center">
-                    <label for="blkQty" class='text-center blkQty'>Block Quantity Request</label>
+                    <label class="label" for="blkQty" class='text-center blkQty'>Block Quantity Request</label>
                     <div class="btn-group">
                       <button type="button" class="yesbtn" id='yesbtn'>Yes</button>
                       <button type="button" class="yesbtn border-left-0 nobtn" id='nobtn'>No</button>
@@ -496,7 +500,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                   </div>
 
                   <div class="form-group col">
-                    <label for="serviceCharge">Seller Service Charge</label>
+                    <label for="serviceCharge" class="label">Seller Service Charge</label>
                     <div class="btn-group" >
                       <button type="button" class="selleractive" id='sellerActive'>Active</button>
                       <button type="button" class="selleractive border-left-0 seller-de"  id='sellerdeactive'>Deactive</button>
@@ -506,13 +510,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 
                 <div class="form-row" id='showRow'>
                   <div class="form-group col-md-6 pr-3">
-                      <label for="scNwprod">SC for New Product</label>
+                      <label for="scNwprod" class="label">SC for New Product</label>
                       <div class="d-flex align-items-center">
                       <input type="number" class="form-control w-25 mr-2" id="scNwprod"><span>%</span>
                       </div>
                   </div>
                     <div class="form-group col-md-6 pl-3">
-                      <label for="scDiscprod">SC for Discount Product</label>
+                      <label for="scDiscprod" class="label">SC for Discount Product</label>
                       <div class="d-flex align-items-center">
                       <input type="number" class="form-control w-25  mr-2" id="scDiscprod"><span>%</span>
                     </div>
@@ -521,7 +525,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 
                 <div class="form-row">
                   <div class="form-group col-12">
-                      <label for="addNotes">Additional Notes</label>
+                      <label for="addNotes" class="label">Additional Notes</label>
                       <textarea class="form-control"  id="addNotes" maxlength="100" required></textarea>
                       <div class='max-length'>(Max length 100 characters)</div>
                     </div>
@@ -554,13 +558,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 <!-- Jquery Plugin-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-<link href="select2.min.css" rel="stylesheet" />
+<script src="edit2.js"></script>
 <!--End-->
 <script>
 
 $(document).ready(function(){
     $('.select2').select2();
-
+  
     $( ".select2" ).change(function() {
         $(".cards").css({"display": "block"});
     });
@@ -715,10 +719,12 @@ function frame() {
     //button.disabled = true;
   } else {
     widthAnim ++;
-    elem.innerHTML ="00.00."+ widthAnim  * 1;
+    elem.innerHTML =widthAnim  * 1;
   }
 }
-}  function timer3(){
+setTimeout(function(){$("#TT001").hide()}, 5000);
+}
+  function timer3(){
   let widthValue = 0;
   let elem = document.getElementById("TT03");
   let widthAnim  = widthValue;
@@ -732,10 +738,12 @@ function frame() {
     //button.disabled = true;
   } else {
     widthAnim ++;
-    elem.innerHTML ="00.00."+ widthAnim  * 1;
+    elem.innerHTML =widthAnim  * 1;
   }
 }
-}  function timer2(){
+setTimeout(function(){$("#TT003").hide()}, 5000);
+}
+  function timer2(){
   let widthValue = 0;
   let elem = document.getElementById("TT02");
   let widthAnim  = widthValue;
@@ -749,9 +757,10 @@ function frame() {
     //button.disabled = true;
   } else {
     widthAnim ++;
-    elem.innerHTML ="00.00."+ widthAnim  * 1;
+    elem.innerHTML =widthAnim  * 1;
   }
 }
+setTimeout(function(){$("#TT002").hide()}, 5000);
 }
 
 
