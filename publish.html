@@ -98,7 +98,7 @@
 
     <div class="col-4" > 
     <label class="label">Supplier Business</label>
-    <select class="form-control select2">
+    <select class="form-control select2 selctionforcards">
         <option>Drag or enter a business name</option>
         <option value="Research Lab Fine Chem Industries">Research Lab Fine Chem Industries</option>
         <option value="Suvidhinanth Laboratories">Suvidhinanth Laboratories</option>
@@ -115,7 +115,7 @@
 
     <div class="col-4"> 
     <label class="label">Supplier</label>    
-    <select class="form-control select2">
+    <select class="form-control select2 selctionforcards">
         <option>Drag or enter a Supplier</option>
         <option>Supplier 1</option>
         <option>Supplier 2</option>
@@ -128,7 +128,7 @@
 
     <div class="col-4"> 
         <label class="label">Warehouse City</label>
-    <select class="form-control select2">
+    <select class="form-control select2 selctionforcards">
         <option>Drag or enter a Ware house city</option>
         <option>Ware house city1</option>
         <option>Ware house city2</option>
@@ -369,7 +369,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                 <div class="form-row">
                     <div class="form-group col-md-6  pr-3">
                       <label for="GST" class="label">GST</label>
-                      <input type="number" class="form-control" id="modalGST" required>
+                      <input type="text" class="form-control onlyalphannumnum" maxlength="15" id="modalGST" required>
                     </div>
                     <div class="form-group col-md-6  pl-3">
                       <label for="shortname" class="label">Short Name</label>
@@ -418,26 +418,28 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                     </div>
                     <div class="form-group col-md-6  pl-3">
                       <label for="postalcode" class="label">Postal Code</label>
-                      <input type="number" class="form-control" id="postalcode" placeholder="Enter postal code" required>
+                      <input type="text" maxlength="6" class="nodecimals form-control" id="postalcode" placeholder="Enter postal code" required>
                     </div>
                   </div>
 
                   <div class="form-row">
-                    <div class="form-group col-md-8">
-                      <label for="accType" class="label">Accredited Type</label>
-                      <div class="form-inline">
-                        <input type="radio" class="form-control radio" name='accType' id="iso" value='iso' checked><span class="ISOTXT">ISO</span>
-                      <input type="radio" class="form-control radio" name='accType' id="gmp" value='gmp'><span class="ISOTXT">GMP</span>
-                      <input type="radio" class="form-control radio" name='accType' id="fda" value='fda'><span class="ISOTXT">FDA</span>
-                      <input type="radio" class="form-control radio" name='accType' id="custom" value='custom'><span class="ISOTXT">Custom Synthesis</span>
-                      <input type="radio" class="form-control radio" name='accType' id="none" value='none'><span class="ISOTXT">None</span>
+                      <div class="form-group col-md-8">
+                        <label class="label" for="accType">Accredited Type</label>
+                        <div class="form-inline">
+                        <label class='lbl-m'><input type="radio" class="form-control radio" name='accType' id="iso" value='iso' checked><span class="TXT">ISO</span></label>
+                        <label class='lbl-m'><input type="radio" class="form-control radio" name='accType' id="gmp" value='gmp'><span class="TXT">GMP</span></label>
+                        <label class='lbl-m'><input type="radio" class="form-control radio" name='accType' id="fda" value='fda'><span class="TXT">FDA</span></label>
+                        <label class='lbl-m'><input type="radio" class="form-control radio" name='accType' id="custom" value='custom'><span class="TXT">Custom Synthesis</span></label>
+                        <label class='lbl-m'><input type="radio" class="form-control radio" name='accType' id="none" value='none'><span class="TXT">None</span></label>
+                        </div>
                       </div>
-                    </div>
+  
+
                     <div class="form-group col-md-4">
                       <label for="status" class="label">Status</label>
                       <div class="form-inline">
-                        <input type="radio" class="form-control"  name="modalstatus" value="Active" checked id="activeid"> Active
-                      <input type="radio" class="form-control"  name="modalstatus" value="Deactive" id="inactiveid"> Inactive
+                        <input type="radio" class="form-control"  name="modalstatus" value="Active" checked id="activeid"> <span class="ISOTXT TXT">Active</span>
+                      <input type="radio" class="form-control"  name="modalstatus" value="Deactive" id="inactiveid"> <span class="ISOTXT TXT">Inactive</span>
                       </div>
                     </div>
                   </div>
@@ -479,7 +481,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                       </div>
                 </div>
 
-                
                 <div class="form-row">
                   <div class="form-group col">
                     <label for="mblNo" class="label">Mobile No.</label>
@@ -487,13 +488,13 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
                       <div class="input-group-prepend">
                         <span class="input-group-text number-padng" style='background:none;'> +91</span>
                       </div>
-                      <input type="number" class="form-control" id="mblNo" placeholder="9999999" required>
+                      <input type="text" class="nodecimals form-control" id="mblNo" maxlength="10" placeholder="9999999999"  required>
                     </div>
                   </div>
 
                   <div class="form-group col text-center">
-                    <label class="label" for="blkQty" class='text-center blkQty'>Block Quantity Request</label>
-                    <div class="btn-group">
+                    <label class="label" for="blkQty" class='text-center blkQty' id="blkqty">Block Quantity Request</label>
+                    <div class="btn-group mt-2">
                       <button type="button" class="yesbtn" id='yesbtn'>Yes</button>
                       <button type="button" class="yesbtn border-left-0 nobtn" id='nobtn'>No</button>
                     </div>
@@ -565,7 +566,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 $(document).ready(function(){
     $('.select2').select2();
   
-    $( ".select2" ).change(function() {
+    $( ".selctionforcards" ).change(function() {
         $(".cards").css({"display": "block"});
     });
     $("#card1,#cards1").click(function(){
@@ -763,6 +764,12 @@ function frame() {
 setTimeout(function(){$("#TT002").hide()}, 5000);
 }
 
+$('.nodecimals').on('input', function() {
+$(this).val($(this).val().replace(/[^0-9]/gi, ''));
+});
 
+$('.onlyalphannumnum').on('input', function() {
+$(this).val($(this).val().replace(/[^a-z0-9]/gi, ''));
+});
 </script>
 </html>

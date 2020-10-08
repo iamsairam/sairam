@@ -116,6 +116,7 @@ $(document).ready(function () {
     $("#modal-close").click(function(){
         $("#modal-form").trigger("reset");
     });
+
     $('.radio').click(function() {
         var selAccType = $(this).val();
         console.log(selAccType);
@@ -126,5 +127,6 @@ $(document).ready(function () {
         $("#selectedAcc").text("Upload "+selAccType.toUpperCase()+" Certificate");
         }
       });
+
 
 });

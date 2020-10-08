@@ -180,7 +180,6 @@ margin-top: 37px;
  .label{
      font-size: 14px;
     font-weight: 600;
-    text-align: left;
     color: #888888;
     
 }
@@ -429,6 +428,9 @@ font-weight: 600;
   input[type='file']{
     margin-top:60px;
   }
+  input[type='file']{
+    margin-top:60px;
+  }
   #thumbnail{
     margin-right:0px;
   }
@@ -594,12 +596,15 @@ color:#fff;
   #extraLargeModal textarea{
     outline:none;
     box-shadow:none;
-    color: #aaa;
     font-size: 14px;
-    font-weight: 600;
   }
   #extraLargeModal input::placeholder{
     color:#aaa;
+  }
+  #blkqty{
+    display: block;
+    margin: auto;
+    
   }
   #extraLargeModal input[type='radio']:first-child{
     margin-left:0px;
@@ -609,9 +614,10 @@ color:#fff;
   }
   .attachText{
     position: relative;
-    left:24%;
+    left:31%;
     color:#aaa;
     font-weight: bold;
+    font-size: 13px;
   }
   #extraLargeModal h5{
     font-weight:600 !important;
@@ -705,7 +711,7 @@ height: 34px;
 }
 
 #extraLargeModal .select2-container--default .select2-selection--single .select2-selection__rendered {
-color: #444;
+color: #495057;
 line-height: 30px;
 }
 
@@ -741,6 +747,9 @@ input[type=number]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.ISOTXT{
+.TXT{
   font-size: 14px !important;
+}
+.form-inline .lbl-m{
+  margin-right:10px;
 }
