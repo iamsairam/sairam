@@ -83,8 +83,6 @@ $(document).ready(function () {
             this.reset();
         });
         $("#modalBusinessname" ).val('').trigger('change'); 
-        $("#" ).val('').trigger('change');
-        
     });
      
 
@@ -118,13 +116,17 @@ $(document).ready(function () {
     $("#modal-close").click(function(){
         $("#modal-form").trigger("reset");
     });
+
     $('.radio').click(function() {
-        var isIso = $(this).val();
-        if(isIso == 'iso'){
-            $("#uploadIso").show();
-        }else{
+        var selAccType = $(this).val();
+        console.log(selAccType);
+        if(selAccType == 'custom' || selAccType == 'none'){
             $("#uploadIso").hide();
+        }else{
+            $("#uploadIso").show();
+        $("#selectedAcc").text("Upload "+selAccType.toUpperCase()+" Certificate");
         }
       });
+
 
 });

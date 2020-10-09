@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__files-and-folders" width="20.727" height="20.727" viewBox="0 0 20.727 20.727">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:#888}
+        </style>
+    </defs>
+    <path id="prefix__Path_781" d="M129.8 6.072V0H120v6.072h6.76a4.25 4.25 0 0 1 1.822 8.091V17H120v3.724h15.869V6.072z" class="prefix__cls-1" data-name="Path 781" transform="translate(-115.142)"/>
+    <g id="prefix__Paper_7_" transform="translate(0 7.287)">
+        <g id="prefix__Group_1972" data-name="Group 1972">
+            <path id="prefix__Path_782" d="M12.225 188.5H4.251a4.251 4.251 0 0 1 0-8.5h7.368a3.036 3.036 0 1 1 0 6.072H4.251a1.822 1.822 0 0 1 0-3.643h7.975v1.214H4.251a.607.607 0 0 0 0 1.214h7.368a1.822 1.822 0 1 0 0-3.643H4.251a3.036 3.036 0 1 0 0 6.072h7.975z" class="prefix__cls-1" data-name="Path 782" transform="translate(0 -180)"/>
+        </g>
+    </g>
+    <path id="prefix__Path_783" d="M392 13.2h4.506L392 8.7z" class="prefix__cls-1" data-name="Path 783" transform="translate(-376.131 -8.347)"/>
+</svg>
