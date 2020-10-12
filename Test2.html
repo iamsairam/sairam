@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Test</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    </head>
+    <body>
+        ghjgyjhgh
+        <div class="search--box">
+            <div class="search--box-inner">
+            <form role="search" method="get" id ="searchform" action="">
+            <input class="search--box--input" name="s">
+            </input>
+            </form>
+            </div>
+            </div>
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        jQuery(".search--box").hide();
+jQuery(".desktop-search").mouseenter(function (e) {
+e.stopPropagation();
+jQuery(".search--box").show();
+jQuery(".search--box--input").focus();
+});
+jQuery(document).not('input.search--box--input').click(function (e) {
+e.stopPropagation();
+jQuery(".search--box").hide();
+});
+    </script>
+</html>

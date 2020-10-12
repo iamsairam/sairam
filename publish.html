@@ -143,10 +143,22 @@
 
 <div class="warehouses">
 <div class="row">
-  <div class="col-4 first"  id="cards1">
+  <div class="col-4 first warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="radio" id="card1" class="checkwr" name="checkwr"></div> 
+                <div><input type="checkbox" id="myCheckbox"></div> 
+               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+            </div>
+            <div class="WRCA">
+                01,Devkaran Mansion, 3rd floor, 79, princess street,
+                Mumbai, Maharashtra, India,  400002.
+            </div>
+          </div>
+        </div>
+    <div class="col-4 first warehosecards">
+            <div class="cards">
+                <div class="flexcontainer">
+                <div><input type="checkbox" id="card2" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
@@ -154,11 +166,11 @@
                 Mumbai, Maharashtra, India,  400002.
             </div>
           </div>
-  </div>
-    <div class="col-4 first" id="cards2">
+        </div>
+    <div class="col-4 first warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="radio" id="card2" class="checkwr" name="checkwr"></div> 
+                <div><input type="checkbox" id="card3" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
@@ -166,23 +178,11 @@
                 Mumbai, Maharashtra, India,  400002.
             </div>
           </div>
-  </div>
-    <div class="col-4 first" id="cards3">
+        </div>
+    <div class="col-4 second warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="radio" id="card3" class="checkwr" name="checkwr"></div> 
-               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
-            </div>
-            <div class="WRCA">
-                1, Devkaran Mansion, 3rd floor, 79, princess street,
-                Mumbai, Maharashtra, India,  400002.
-            </div>
-          </div>
-  </div>
-    <div class="col-4 second"  id="cards4">
-            <div class="cards">
-                <div class="flexcontainer">
-                <div><input type="radio" id="card4" class="checkwr" name="checkwr"></div> 
+                <div><input type="checkbox" id="card4" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
@@ -190,11 +190,11 @@
                 Mumbai, Maharashtra, India, 400002.
             </div>
           </div>
-  </div>
-      <div class="col-4 second" id="cards5">
+        </div>
+      <div class="col-4 second warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="radio" id="card5" class="checkwr" name="checkwr"></div> 
+                <div><input type="checkbox" id="card5" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
@@ -202,11 +202,11 @@
                 Mumbai, Maharashtra, India,  400002.
             </div>
           </div>
-  </div>
-      <section class="col-4 second" id="cards6">
+        </div>
+      <div class="col-4 second warehosecards">
             <section class="cards">
                 <div class="flexcontainer">
-                <div><input type="radio" id="card6" class="checkwr" name="checkwr"></div> 
+                <div><input type="checkbox" id="card6" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
@@ -214,7 +214,7 @@
                 Mumbai, Maharashtra, India,  400002.
             </div>
           </section>
-        </section>
+        </div>
 </div>
 </div>
 
@@ -569,40 +569,43 @@ $(document).ready(function(){
     $( ".selctionforcards" ).change(function() {
         $(".cards").css({"display": "block"});
     });
-    $("#card1,#cards1").click(function(){
-    $("#cards2,#cards3,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
-    $(".uploadsection").css({"display":"block"});
-    $("#card1").attr("checked","true");
-    });
-    $("#card2,#cards2").click(function(){
-    $("#cards1,#cards3,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
-    $(".uploadsection").css({"display":"block"});
-    $("#card2").attr("checked","true");
-    });
-    $("#card3,#cards3").click(function(){
-    $("#cards2,#cards1,#cards4,#cards5,#cards6").css({"display": "none"}).remove();
-    $(".uploadsection").css({"display":"block"});
-    $("#card3").attr("checked","true");
-    });
-    $("#card4,#cards4").click(function(){
-    $("#cards2,#cards3,#cards1,#cards5,#cards6").css({"display": "none"}).remove();
-    $(".uploadsection").css({"display":"block"});
-    $("#card1").attr("checked","true");
-    });
-    $("#card5,#cards5").click(function(){
-    $("#cards2,#cards3,#cards4,#cards1,#cards6").css({"display": "none"}).remove();
-    $(".uploadsection").css({"display":"block"});
-    $("#card5").attr("checked","true");
-    });
-    $("#card6,#cards6").click(function(){
-    $("#cards2,#cards3,#cards4,#cards5,#cards1").css({"display": "none"}).remove();
-    $(".uploadsection").css({"display":"block"});
-    $("#card6").attr("checked","true");
-    });
+
+    // $("#card1,#cards1").click(function(){
+    // $("#cards2,#cards3,#cards4,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card1").attr("checked","true");
+    // });
+    // $("#card2,#cards2").click(function(){
+    // $("#cards1,#cards3,#cards4,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card2").attr("checked","true");
+    // });
+    // $("#card3,#cards3").click(function(){
+    // $("#cards2,#cards1,#cards4,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card3").attr("checked","true");
+    // });
+    // $("#card4,#cards4").click(function(){
+    // $("#cards2,#cards3,#cards1,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card1").attr("checked","true");
+    // });
+    // $("#card5,#cards5").click(function(){
+    // $("#cards2,#cards3,#cards4,#cards1,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card5").attr("checked","true");
+    // });
+    // $("#card6,#cards6").click(function(){
+    // $("#cards2,#cards3,#cards4,#cards5,#cards1").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card6").attr("checked","true");
+    // });
     
 
-
   });
+
+
+
 
    function getfileName(str){
     var filename=str;
@@ -771,5 +774,29 @@ $(this).val($(this).val().replace(/[^0-9]/gi, ''));
 $('.onlyalphannumnum').on('input', function() {
 $(this).val($(this).val().replace(/[^a-z0-9]/gi, ''));
 });
+</script>
+
+<script>
+const checkbox = document.getElementById('myCheckbox');
+
+checkbox.addEventListener('change', (event) => {
+  if (event.target.checked) {
+    checkedbtn();
+  } else {
+    unchekedbtn();
+  }
+
+  function checkedbtn(){
+    alert("CheckBox Checked!");
+    $(this).attr('id','checkbox');
+    $('.warehousecards:not(#checkbox)').hide(); // hide everything that isn't #myDiv
+   //$("div").each(function () { $(this).toggle(!!this.class); });
+  }
+
+  function unchekedbtn(){
+    alert("Check Box Unchecked!");
+    
+  }
+})  
 </script>
 </html>
