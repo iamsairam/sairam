@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96.488" height="96.867" viewBox="0 0 96.488 96.867">
+  <g id="edit-color" transform="translate(0 0)" opacity="0.25">
+    <path id="Path_12020" data-name="Path 12020" d="M293.7,250,271,257.568l22.7,7.568,22.7-7.568Z" transform="translate(-219.918 -202.701)" fill="#fff"/>
+    <path id="Path_12021" data-name="Path 12021" d="M1,257.568l22.7,7.568,22.7-7.568L23.7,250Z" transform="translate(-1 -202.701)" fill="#fff"/>
+    <path id="Path_12022" data-name="Path 12022" d="M159.6.146a2.839,2.839,0,0,0-1.795,0L136,7.415l22.7,7.568,22.7-7.568Z" transform="translate(-110.459 0)" fill="#fff"/>
+    <path id="Path_12023" data-name="Path 12023" d="M136,357.641l19.865-6.622v-29.4L136,328.245Z" transform="translate(-110.459 -260.774)" fill="#fff"/>
+    <path id="Path_12024" data-name="Path 12024" d="M1,348.974a2.838,2.838,0,0,0,1.941,2.692l17.925,5.975v-29.4L1,321.623Z" transform="translate(-1 -260.774)" fill="#fff"/>
+    <path id="Path_12025" data-name="Path 12025" d="M271,351.019l19.865,6.622v-29.4L271,321.623Z" transform="translate(-219.918 -260.774)" fill="#fff"/>
+    <path id="Path_12026" data-name="Path 12026" d="M406,357.641l17.925-5.975a2.838,2.838,0,0,0,1.94-2.692V321.623L406,328.245Z" transform="translate(-329.377 -260.774)" fill="#fff"/>
+    <path id="Path_12027" data-name="Path 12027" d="M136,100.739l19.865,6.622V77.433L136,70.811Z" transform="translate(-110.459 -57.414)" fill="#fff"/>
+    <path id="Path_12028" data-name="Path 12028" d="M290.865,100.739V70.811L271,77.433v29.928Z" transform="translate(-219.918 -57.414)" fill="#fff"/>
+  </g>
+</svg>

@@ -141,7 +141,6 @@ margin-top: 30px;
 .warehouses{
  margin-top: 13px;
 } 
-
 .first{
  margin-top: 37px;
 } 
@@ -153,7 +152,6 @@ margin-top: 37px;
   flex-direction: row;
 }
 .cards{
-  cursor: pointer;
   display: none;
   width:100%;
   background-color: #ffffff;
@@ -209,13 +207,16 @@ padding-top: 10px 20px 10px 20px;
 .subbtn:focus{
   outline:0;
 }
+
+.uploadsection{
+  display: none;
+}
+
 .progress-container{
 border: solid 1px rgba(112, 112, 112, 0.18);
 border-radius: 5px;
 }
-input[type="checkbox"]{
-  cursor: pointer;
-}
+
 
 
 /* input[type="radio"]:checked:before{
@@ -564,6 +565,9 @@ color:#fff;
     color:#fff;
   }
 
+  img{
+    max-width:180px;
+  }
   input[type=file]{
   padding:10px;
   background:#2d2d2d;
@@ -751,8 +755,4 @@ input[type=number]::-webkit-inner-spin-button {
 }
 .form-inline .lbl-m{
   margin-right:10px;
-}
-.dsa{
-  background-color: seagreen;
-  display: none !important;
 }

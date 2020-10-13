@@ -298,9 +298,9 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-body text-center">
-          <img src="assets/Icons/SuccessModal.svg" style="width: 50% !important; margin-top:35px;">
-          <p style="font-weight: 18px; color: #23282d;margin-top:25px !important;" class="modal-title" id="exampleModalLabel">Products Uploaded Successfully</p>
-        <button style="color: #ffffff;font-weight: 600;font-size: 16px;background-color: #3e3ed2;padding:10px 30px 10px 30px;margin-top:35px;margin-bottom: 25px;" type="button" class="btn btn-primary" data-dismiss="modal" id="" name="" onclick="{location.reload();}">Done</button>
+          <img src="assets/Icons/SuccessModal.svg" height="245px" width="374px">
+          <p style="font-weight: 18px; color: #23282d;margin-top:25px;" class="modal-title" id="exampleModalLabel">Products Uploaded Successfully</p>
+        <button style="color: #ffffff;font-weight: 600;font-size: 16px;background-color: #3e3ed2;padding:10px 30px 10px 30px;margin-top:35px;" type="button" class="btn btn-primary" data-dismiss="modal" id="" name="" onclick="{location.reload();}">Done</button>
         </div>
       </div>
     </div>
@@ -565,11 +565,47 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 
 $(document).ready(function(){
     $('.select2').select2();
-
+  
     $( ".selctionforcards" ).change(function() {
         $(".cards").css({"display": "block"});
     });
+
+    // $("#card1,#cards1").click(function(){
+    // $("#cards2,#cards3,#cards4,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card1").attr("checked","true");
+    // });
+    // $("#card2,#cards2").click(function(){
+    // $("#cards1,#cards3,#cards4,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card2").attr("checked","true");
+    // });
+    // $("#card3,#cards3").click(function(){
+    // $("#cards2,#cards1,#cards4,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card3").attr("checked","true");
+    // });
+    // $("#card4,#cards4").click(function(){
+    // $("#cards2,#cards3,#cards1,#cards5,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card1").attr("checked","true");
+    // });
+    // $("#card5,#cards5").click(function(){
+    // $("#cards2,#cards3,#cards4,#cards1,#cards6").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card5").attr("checked","true");
+    // });
+    // $("#card6,#cards6").click(function(){
+    // $("#cards2,#cards3,#cards4,#cards5,#cards1").hide();
+    // $(".uploadsection").css({"display":"block"});
+    // $("#card6").attr("checked","true");
+    // });
+    
+
   });
+
+
+
 
    function getfileName(str){
     var filename=str;
@@ -739,36 +775,35 @@ $('.onlyalphannumnum').on('input', function() {
 $(this).val($(this).val().replace(/[^a-z0-9]/gi, ''));
 });
 </script>
+
 <script>
-  $(".warehosecards").click(function() {
-  var clickedcards = $(this);
-  
-    var checkedcard = $(this);
+// const checkbox = document.getElementById('myCheckbox');
 
-    var attr = $(this).attr('id');
+// checkbox.addEventListener('change', (event) => {
+//   if (event.target.checked) {
+//     var checkedcard = $(this).closest('.warehousecards')  ;
+//             alert(checkedcard.html());
+//             $(checkedcard).addClass('checked');   
+//               $('.warehousecards:not(.checked)').hide(); // hide everything that isn't #myDiv
+//                   //$("div").each(function () { $(this).toggle(!!this.class); });   
+                  
 
-// For some browsers, `attr` is undefined; for others,
-// `attr` is false.  Check for both.
+//   } else {
+//     unchekedbtn();
+//   }
 
+        
+// })  
+$( ".warehosecards [type=checkbox]" ).change(function()
+ {   
 
-if (typeof attr !== typeof undefined && attr !== false) {
-  
-    // alert("Entered into condition");
-  
-      $(".uploadsection").hide();
-      checkedcard.removeAttr('id');
-      $(".warehosecards [type=checkbox]").removeAttr('checked');
-      $('.warehosecards').show();
-
-}
-else{
-  clickedcards.find( "input" ).attr('checked','true');
-  checkedcard.attr('id','checkedd');
-  $('.warehosecards:not(#checkedd)').hide();
-  $(".uploadsection").show();
-  //alert("removed id");
-}
-
-});
+   var $chheckbox = $(this);  
+   var checkedcard = $chheckbox.closest('.warehousecards')  ;
+    if($chheckbox.is(":checked")) {
+      alert(checkedcard.html());
+     $(checkedcard).addClass('checked'); 
+    
+    }
+ });
 </script>
 </html>
