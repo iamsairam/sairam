@@ -146,7 +146,12 @@
   <div class="col-4 first warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="checkbox" id="myCheckbox"></div> 
+                <!-- <div><input type="checkbox" id="myCheckbox"></div>  -->
+                <label class="containerd">
+                  <input type="checkbox"  id="myCheckbox" style="visibility: hidden;">
+                  <span class="checkmark"></span>
+                </label>
+
                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
@@ -158,8 +163,12 @@
     <div class="col-4 first warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="checkbox" id="card2" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
-               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+                <!-- <div><input type="checkbox" id="card2" class="checkwr" name="checkwr" onchange="checkbtn()"></div>  -->
+                <label class="containerd">
+                  <input type="checkbox"  id="myCheckbox" style="visibility: hidden;">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
                 1, Devkaran Mansion, 3rd floor, 79, princess street,
@@ -170,8 +179,12 @@
     <div class="col-4 first warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="checkbox" id="card3" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
-               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+                <!-- <div><input type="checkbox" id="card3" class="checkwr" name="checkwr" onchange="checkbtn()"></div>  -->
+                <label class="containerd">
+                  <input type="checkbox"  id="myCheckbox" style="visibility: hidden;">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
                 1, Devkaran Mansion, 3rd floor, 79, princess street,
@@ -182,8 +195,12 @@
     <div class="col-4 second warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="checkbox" id="card4" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
-               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+                <!-- <div><input type="checkbox" id="card4" class="checkwr" name="checkwr" onchange="checkbtn()"></div>  -->
+                <label class="containerd">
+                  <input type="checkbox"  id="myCheckbox" style="visibility: hidden;">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
                 1,Devkaran Mansion, 3rd floor, 79, princess street,
@@ -194,8 +211,12 @@
       <div class="col-4 second warehosecards">
             <div class="cards">
                 <div class="flexcontainer">
-                <div><input type="checkbox" id="card5" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
-               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+                <!-- <div><input type="checkbox" id="card5" class="checkwr" name="checkwr" onchange="checkbtn()"></div>  -->
+                <label class="containerd">
+                  <input type="checkbox"  id="myCheckbox" style="visibility: hidden;">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
                 1, Devkaran Mansion, 3rd floor, 79, princess street,
@@ -206,8 +227,12 @@
       <div class="col-4 second warehosecards">
             <section class="cards">
                 <div class="flexcontainer">
-                <div><input type="checkbox" id="card6" class="checkwr" name="checkwr" onchange="checkbtn()"></div> 
-               <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
+                <!-- <div><input type="checkbox" id="card6" class="checkwr" name="checkwr" onchange="checkbtn()"></div>  -->
+                <label class="containerd">
+                  <input type="checkbox"  id="myCheckbox" style="visibility: hidden;">
+                  <span class="checkmark"></span>
+                </label>
+                <div class="WRC">WR-662443 - Research Lab Fine</div><div class="PPActive1"><span class="PPActive">Active</span></div>
             </div>
             <div class="WRCA">
                 1,Devkaran Mansion, 3rd floor, 79, princess street,
@@ -565,10 +590,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste veniam ve
 
 $(document).ready(function(){
     $('.select2').select2();
-
-    $( ".selctionforcards" ).change(function() {
-        $(".cards").css({"display": "block"});
-    });
   });
 
    function getfileName(str){
@@ -739,21 +760,24 @@ $('.onlyalphannumnum').on('input', function() {
 $(this).val($(this).val().replace(/[^a-z0-9]/gi, ''));
 });
 </script>
-<script>
-  $(".warehosecards").click(function() {
-  var clickedcards = $(this);
-  
-    var checkedcard = $(this);
 
+<script>
+  $( ".selctionforcards" ).change(function() {
+        $(".warehosecards").css({"display": "block"});
+        $(".warehosecards [type=checkbox]").removeAttr('checked');
+        $('.warehosecards').removeAttr('id');
+        $(".warehosecards #checkedd").hide(); 
+        $('.warehosecards').show();
+        $(".uploadsection,.pbt,.error").hide();
+
+    });
+
+  $(".warehosecards").click(function() {
+    var clickedcards = $(this);
+    var checkedcard = $(this);
     var attr = $(this).attr('id');
 
-// For some browsers, `attr` is undefined; for others,
-// `attr` is false.  Check for both.
-
-
 if (typeof attr !== typeof undefined && attr !== false) {
-  
-    // alert("Entered into condition");
   
       $(".uploadsection").hide();
       checkedcard.removeAttr('id');
@@ -768,7 +792,7 @@ else{
   $(".uploadsection").show();
   //alert("removed id");
 }
-
 });
+
 </script>
 </html>

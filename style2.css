@@ -154,7 +154,7 @@ margin-top: 37px;
 }
 .cards{
   cursor: pointer;
-  display: none;
+  /* display: none; */
   width:100%;
   background-color: #ffffff;
   font-size: 16px;
@@ -163,6 +163,60 @@ margin-top: 37px;
   line-height: 1.8;
   padding:15px 10px 15px 15px;
 }
+.warehosecards{
+  display: none;
+}
+
+/* Create a custom checkbox */
+.warehouses .checkmark {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  height: 14px;
+  width: 14px;
+  background-color: #fff;
+  border:1px solid #3b3b84;
+  border-radius:5px;
+}
+
+/* On mouse-over, add a grey background color */
+.warehouses .containerd:hover input ~ .checkmark {
+  background-color: #fff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.warehouses .containerd input:checked ~ .checkmark {
+  background-color: #3b3b84;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.warehouses .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.warehouses .containerd input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.warehouses .containerd .checkmark:after {
+  left: 4px;
+  top: 0px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+
+
 
 .PPActive{
   margin-left:20px;
