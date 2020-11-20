@@ -163,6 +163,11 @@ margin-top: 37px;
   line-height: 1.8;
   padding:15px 10px 15px 15px;
 }
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid rgba(112, 112, 112, 0.18) !important;
+}
+
 .warehosecards{
   display: none;
 }
