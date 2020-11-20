@@ -175,7 +175,7 @@ margin-top: 37px;
   height: 14px;
   width: 14px;
   background-color: #fff;
-  border:1px solid #3b3b84;
+  border:1px solid #0c0c66;
   border-radius:5px;
 }
 
@@ -186,7 +186,7 @@ margin-top: 37px;
 
 /* When the checkbox is checked, add a blue background */
 .warehouses .containerd input:checked ~ .checkmark {
-  background-color: #3b3b84;
+  background-color: #0c0c66;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
